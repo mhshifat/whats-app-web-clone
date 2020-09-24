@@ -1,0 +1,118 @@
+.chat-window {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.chat-window__header {
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.chat-window__header-info {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.chat-window__header-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.chat-window__header-name {
+	font-size: 17px;
+	color: #000;
+}
+
+.chat-window__header-buttons {
+	display: flex;
+	align-items: center;
+	margin-right: 15px;
+}
+
+.chat-window__header-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.chat-window__body {
+	flex: 1;
+	overflow-y: auto;
+	background-color: #e5ddd5;
+	position: relative;
+	z-index: 2;
+	padding: 20px 30px;
+}
+
+.chat-window__body::before {
+	content: "";
+	position: absolute;
+	background-image: url("https://web.whatsapp.com/img/bg-chat-tile-light_686b98c9fdffef3f63127759e2057750.png");
+	background-repeat: repeat;
+	background-position: center;
+	opacity: 0.1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.chat-window__footer {
+	height: 62px;
+	display: flex;
+	align-items: center;
+}
+
+.chat-window__footer-pre {
+	display: flex;
+	margin: 0 15px;
+}
+
+.chat-window__footer-input-area {
+	flex: 1;
+}
+
+.chat-window__footer-pos {
+	display: flex;
+	margin: 0 15px;
+}
+
+.chat-window__footer-input {
+	width: 100%;
+	height: 40px;
+	border: 0;
+	outline: 0;
+	background: #fff;
+	border-radius: 20px;
+	font-size: 15px;
+	color: #4a4a4a;
+	padding-left: 15px;
+}
+
+aside.emoji-picker-react {
+	width: auto;
+	background: none;
+}
+
+.emoji-picker-react .emoji-group::before {
+	background: none;
+}
+
+.chat-window__emoji-area {
+	height: 200px;
+	overflow-y: hidden;
+	transition: all 0.3s ease;
+}
